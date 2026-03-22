@@ -1,6 +1,6 @@
 cask "glazewm-indicator" do
-  version "0.1.0"
-  sha256 "55da4b4ada5b1e3fd82cd48d2505c4a7cf59b4e35f831616cdd25f80dde484e5"
+  version "0.1.1"
+  sha256 "42a19848d269713f59deb417eee4c1b97ef6192931458a1ebd269c98ee331319"
 
   url "https://github.com/vrognas/GlazeWMIndicator/releases/download/v#{version}/GlazeWMIndicator-#{version}.zip"
   name "GlazeWM Indicator"
@@ -10,6 +10,11 @@ cask "glazewm-indicator" do
   depends_on macos: ">= :ventura"
 
   app "GlazeWM Indicator.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/GlazeWM Indicator.app"]
+  end
 
   zap trash: [
     "~/Library/Preferences/io.glzr.glazewm-indicator.plist",
