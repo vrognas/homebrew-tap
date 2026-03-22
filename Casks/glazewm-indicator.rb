@@ -9,7 +9,12 @@ cask "glazewm-indicator" do
 
   depends_on macos: ">= :ventura"
 
-  app "GlazeWM Indicator.app", no_quarantine: true
+  app "GlazeWM Indicator.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/GlazeWM Indicator.app"]
+  end
 
   zap trash: [
     "~/Library/Preferences/io.glzr.glazewm-indicator.plist",
