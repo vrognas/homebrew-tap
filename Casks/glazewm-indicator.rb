@@ -1,6 +1,6 @@
 cask "glazewm-indicator" do
-  version "0.1.5"
-  sha256 "d7eece493f831b12173b0fc78c6fdd611b8beae7f788e163314c38ace659aa9f"
+  version "0.1.6"
+  sha256 "51c8879c58926916d30cd7ae4340e811b055783fceab119904da3448853db654"
 
   url "https://github.com/vrognas/glazewm-indicator/releases/download/v#{version}/glazewm-indicator-#{version}.zip"
   name "GlazeWM Indicator"
