@@ -11,11 +11,6 @@ cask "glazewm-indicator" do
 
   app "GlazeWM Indicator.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/GlazeWM Indicator.app"]
-  end
-
   zap trash: [
     "~/Library/Preferences/io.glzr.glazewm-indicator.plist",
   ]
