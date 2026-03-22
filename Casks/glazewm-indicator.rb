@@ -9,7 +9,7 @@ cask "glazewm-indicator" do
 
   depends_on macos: ">= :ventura"
 
-  app "GlazeWM Indicator.app"
+  app "GlazeWM Indicator.app", no_quarantine: true
 
   zap trash: [
     "~/Library/Preferences/io.glzr.glazewm-indicator.plist",
