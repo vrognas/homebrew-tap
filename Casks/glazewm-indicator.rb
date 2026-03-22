@@ -10,6 +10,7 @@ cask "glazewm-indicator" do
   depends_on macos: ">= :ventura"
 
   app "GlazeWM Indicator.app"
+  binary "#{appdir}/GlazeWM Indicator.app/Contents/MacOS/GlazeWMIndicator", target: "glazewm-indicator"
 
   postflight do
     system_command "/usr/bin/xattr",
