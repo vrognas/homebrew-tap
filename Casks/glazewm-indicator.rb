@@ -17,6 +17,6 @@ cask "glazewm-indicator" do
   end
 
   zap trash: [
-    "~/Library/Preferences/io.glzr.glazewm-indicator.plist",
+    "~/Library/Preferences/com.vrognas.glazewm-indicator.plist",
   ]
 end
